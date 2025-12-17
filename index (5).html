@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Code</title>
+  <style>
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: #00d4aa;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: linear-gradient(135deg, #00d4aa, #00a8cc);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.4);
+}
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane e Sandro Móveis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #2d1b69;
+            background: linear-gradient(-45deg, #ff9a9e 0%, #fecfef 25%, #fecfef 26%, #fad0c4 50%, #fad0c4 51%, #ffd1ff 75%, #ffd1ff 76%, #ff9a9e 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            letter-spacing: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #ff9ff3, #54a0ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { filter: drop-shadow(0 0 5px #ff6b6b); }
+            25% { filter: drop-shadow(0 0 10px #feca57); }
+            50% { filter: drop-shadow(0 0 15px #ff9ff3); }
+            75% { filter: drop-shadow(0 0 20px #54a0ff); }
+            100% { filter: drop-shadow(0 0 25px #ff6b6b); }
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            opacity: 0.98;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 0;
+            background: rgba(255,255,255,0.92);
+            margin: 3rem 0;
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(255,107,107,0.25);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #ff9ff3, #54a0ff, #ff6b6b);
+            background-size: 300% 300%;
+            animation: borderGlow 2s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.8rem;
+            font-weight: 800;
+            animation: titlePulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titlePulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #5a67d8;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-weight: 500;
+        }
+
+        .telefone-destaque {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 50%, #ff9ff3 100%);
+            color: white;
+            padding: 2.2rem 3.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            box-shadow: 0 15px 45px rgba(255,107,107,0.4);
+            margin: 2rem 0;
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .telefone-destaque::before {
+            content: '📞 ';
+            margin-right: 0.8rem;
+            font-size: 2rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .telefone-destaque:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(255,107,107,0.6);
+        }
+
+        .empreendedores {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,248,243,0.9));
+            padding: 4.5rem 0;
+            border-radius: 25px;
+            margin: 3rem 0;
+            box-shadow: 0 20px 60px rgba(255,182,193,0.3);
+            text-align: center;
+            border: 2px solid rgba(255,182,193,0.2);
+        }
+
+        .empreendedores h3 {
+            font-size: 2.4rem;
+            background: linear-gradient(45deg, #a55eea, #54a0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .nomes {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef, #fad0c4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            display: block;
+            animation: namesShine 4s ease-in-out infinite;
+        }
+
+        @keyframes namesShine {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(255,154,158,0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255,154,158,0.8)); }
+        }
+
+        .empreendedores p {
+            font-size: 1.25rem;
+            color: #6b46c1;
+            max-width: 650px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        .missao {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #ffecd2 100%);
+            color: #2d1b69;
+            padding: 4.5rem 0;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 25px 70px rgba(168,237,234,0.3);
+        }
+
+        .missao h3 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .missao p {
+            font-size: 1.35rem;
+            font-weight: 600;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .contato-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,248,243,0.9));
+            padding: 4.5rem 0;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255,107,107,0.2);
+            border: 2px solid rgba(255,107,107,0.2);
+        }
+
+        .contato-section h3 {
+            font-size: 2.4rem;
+            color: #2d1b69;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .contato-section p {
+            font-size: 1.25rem;
+            color: #5a67d8;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        .btn-secundario {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(245,87,108,0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-secundario:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(245,87,108,0.6);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #ff9ff3, #54a0ff);
+            animation: borderGlow 3s linear infinite;
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2.8rem; }
+            .hero h2 { font-size: 2.4rem; }
+            .nomes { font-size: 2.4rem; }
+            .telefone-destaque { 
+                font-size: 1.5rem; 
+                padding: 1.8rem 2.5rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Jane e Sandro Móveis</div>
+                <div class="slogan">Vibrando com cores e estilo para o seu lar</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Chegamos com muita energia!</h2>
+            <p>Jane e Sandro estão criando móveis cheios de vida e personalidade para transformar sua casa num espaço único e acolhedor.</p>
+            
+            <a href="tel:+5511968756413" class="telefone-destaque">
+                Ligue já: (11) 96875-6413
+            </a>
+            
+            <p style="font-size: 1.1rem; color: #8b5cf6; margin-top: 1.5rem; font-weight: 600;">
+                Vamos conversar sobre o seu sonho?
+            </p>
+        </section>
+
+        <section class="empreendedores">
+            <h3>Os criadores da magia</h3>
+            <div class="nomes">Jane e Sandro</div>
+            <p>Com paixão por cores vibrantes e design inovador, transformamos ideias em móveis que contam a sua história com muita personalidade!</p>
+        </section>
+
+        <section class="missao">
+            <h3>Nossa Missão Cheia de Cor</h3>
+            <p>Levar alegria, estilo e funcionalidade para cada canto da sua casa. Móveis que pulsam vida e refletem quem você realmente é!</p>
+        </section>
+
+        <section class="contato-section">
+            <h3>Pronta para dar vida ao seu espaço?</h3>
+            <p>Nossa equipe está vibrando para atender você e criar o lar dos seus sonhos!</p>
+            <a href="tel:+5511968756413" class="btn-secundario">Fale Conosco Agora</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jane e Sandro Móveis | Cheios de cor e carinho para o seu lar ✨</p>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
